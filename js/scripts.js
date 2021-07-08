@@ -239,50 +239,6 @@ $(document).ready(function () {
 
 /********************** Extras **********************/
 
-// Google map
-ymap.ready(initMap);
-function initMap() {
-    var location = [59.928550190065835, 30.336939556176333];
-    var myMap = new ymaps.Map("map-canvas", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
-            center: location,
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 10
-        });
-    
-
-    var marker = new ymaps.Placemark({
-        position: location
-    });
-
-    myMap.geoObjects.add(marker);
-}
-
-function initBBSRMap() {
-    var location = [59.93422022103415, 30.29413404268257];
-    var myMap = new ymaps.Map("map-canvas", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
-            center: location,
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 10
-        });
-    
-
-    var marker = new ymaps.Placemark({
-        position: location
-    });
-
-    myMap.geoObjects.add(marker);
-}
-
 // alert_markup
 function alert_markup(alert_type, msg) {
     return '<div class="alert alert-' + alert_type + '" role="alert">' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button></div>';
