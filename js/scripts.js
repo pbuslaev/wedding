@@ -242,7 +242,7 @@ $(document).ready(function () {
 // Google map
 function initMap() {
     var location = [59.928550190065835, 30.336939556176333];
-    var myMap = new ymaps.Map("map-canvs", {
+    var myMap = new ymaps.Map("map-canvas", {
             // Координаты центра карты.
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
