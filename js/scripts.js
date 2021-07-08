@@ -241,17 +241,24 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 59.928550190065835, lng: 30.336939556176333};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: location,
-        scrollwheel: false
+    var location = [59.928550190065835, 30.336939556176333];
+    var myMap = new ymaps.Map("map-canvs", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: location,
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 10
+        });
+    
+
+    var marker = new ymaps.Placemark({
+        position: location
     });
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
+    myMap.geoObjects.add(marker);
 }
 
 function initBBSRMap() {
