@@ -240,6 +240,7 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
+ymap.ready(initMap);
 function initMap() {
     var location = [59.928550190065835, 30.336939556176333];
     var myMap = new ymaps.Map("map-canvas", {
