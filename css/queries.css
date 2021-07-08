@@ -364,3 +364,92 @@
         padding-top: 20px;
     }
 }
+
+.styleguide {
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 100px; }
+  .styleguide_p2 {
+    text-align: center;
+    padding-bottom: 30px; }
+  .styleguide__img {
+    max-width: 700px;
+    margin: 40px auto 0; }
+    @media only screen and (max-width: 1000px) {
+      .styleguide__img {
+        max-width: 100%; } }
+  .styleguide__annotation {
+    font-style: italic;
+    margin: 0px auto 120px !important;
+    color: #999; }
+  .styleguide h4 {
+    margin-top: 60px; }
+  .styleguide_p {
+    text-align: center;
+    margin: 20px auto 80px; }
+  .styleguide_h {
+    max-width: 60%;
+    margin-bottom: 30px;
+    width: 400px; }
+  .styleguide p {
+    opacity: 1;
+    max-width: 600px;
+    margin: 30px auto; }
+  .styleguide .container {
+    text-align: center; }
+  .styleguide__palette {
+    display: flex;
+    max-width: 700px;
+    justify-content: center;
+    margin: 30px auto 0; }
+    .styleguide__palette span {
+      width: calc(100%/5 - 10px);
+      overflow: hidden;
+      border: 1px solid #d4d4d4;
+      margin-right: 10px;
+      margin-left: 10px;
+      position: relative; }
+      .styleguide__palette span b {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #fff;
+        font-weight: 100;
+        font-size: 14px;
+        opacity: .5; }
+      @media only screen and (max-width: 1000px) {
+        .styleguide__palette span {
+          margin-right: 5px;
+          margin-left: 5px;
+          width: calc(100%/5 - 5px); } }
+      .styleguide__palette span.dark-grey:before {
+        background: #555 !important; }
+      .styleguide__palette span.black:before {
+        background: #000 !important; }
+      .styleguide__palette span:nth-child(1):before {
+        background: #b3b2af; }
+      .styleguide__palette span:nth-child(2):before {
+        background: #E3BABE; }
+      .styleguide__palette span:nth-child(3):before {
+        background: #543a2e; }
+      .styleguide__palette span:nth-child(5):before {
+        background: #979D93; }
+      .styleguide__palette span:nth-child(4) b {
+        color: #543a2e; }
+      .styleguide__palette span:nth-child(4):before {
+        background: #EFDFC6; }
+      .styleguide__palette span:after {
+        content: '';
+        display: block;
+        margin-top: 100%; }
+      .styleguide__palette span:before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background: #e1e1e1; }
