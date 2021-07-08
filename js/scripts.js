@@ -262,17 +262,24 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: la_fiesta,
-        scrollwheel: false
+    var location = [59.93422022103415, 30.29413404268257];
+    var myMap = new ymaps.Map("map-canvas", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: location,
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 10
+        });
+    
+
+    var marker = new ymaps.Placemark({
+        position: location
     });
 
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
-    });
+    myMap.geoObjects.add(marker);
 }
 
 // alert_markup
